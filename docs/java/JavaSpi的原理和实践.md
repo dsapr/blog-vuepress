@@ -20,7 +20,7 @@
 
 Java SPI 的运行流程：
 
-![](images/JavaSPI的运行流程.png)
+![](../.vuepress/public/images/JavaSPI的运行流程.png)
 
 ## 思考
 ~~~markdown
@@ -38,7 +38,7 @@ Java SPI 的运行流程：
 - 每个数据库厂商都会提供各自的 JDBC 实现
 
 JDBC 架构图：
-![](images/JDBC架构图.jpeg)
+![](../.vuepress/public/images/JDBC架构图.jpeg)
 
 ### SPI 之前 JDBC 访问数据库
 
