@@ -22,6 +22,10 @@ export default defineUserConfig<DefaultThemeOptions>({
                 link: '/java/'
             },
             {
+                text: 'SQL',
+                link: '/sql/'
+            },
+            {
                 text: '站点',
                 children: [
                     {
