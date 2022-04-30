@@ -29,6 +29,10 @@ export default defineUserConfig<DefaultThemeOptions>({
                 text: '哲学',
                 link: '/philosophy/'
             },
+			{
+                text: '其他',
+                link: '/other/'
+            },
             {
                 text: '站点',
                 children: [
