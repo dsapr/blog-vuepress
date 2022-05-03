@@ -8,3 +8,5 @@ title: 哲学 相关
 ## [如何证明猫是猫狗是狗？](../philosophy/如何证明猫是猫狗是狗.md)
 ## [无意识](../philosophy/无意识.md)
 ## [大他者](../philosophy/大他者.md)
+## [羞耻的五个层次](../philosophy/羞耻的五个层次.md)
+## [拉康打人（当头棒喝）](../philosophy/拉康打人.md)
