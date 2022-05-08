@@ -22,6 +22,10 @@ export default defineUserConfig<DefaultThemeOptions>({
                 link: '/java/'
             },
             {
+                text: '计算机网络',
+                link: '/network/'
+            },
+            {
                 text: 'SQL',
                 link: '/sql/'
             },
