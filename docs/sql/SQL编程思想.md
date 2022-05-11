@@ -29,3 +29,63 @@ AND (a.id IS NULL
      OR EXTRACT(HOUR FROM a.clock_out) < 18);
 ~~~
 
+# SQL 面试题
+
+## 基于扫码记录 查找密接人员
+
+|    uid    | area |      scan_time      |
+| :-------: | :--: | :-----------------: |
+| 130111111 | A001 | 2022-05-01 09:00:00 |
+| 130111111 | A001 | 2022-05-01 10:00:00 |
+| 130111111 | A001 | 2022-05-01 11:00:00 |
+| 130222222 | A002 | 2022-05-01 11:05:00 |
+|    ...    | ...  |         ...         |
+
+### 问题一
+
+- 找出每个用户在每个区域的行动轨迹
+
+~~~mysql
+WITH tmp AS (
+SELECT uid, area, scan_time,
+	   -- 扫描时间排序 - 区域划分后扫描时间排序
+	   ROW_NUMBER() OVER (PARTITION BY scan_time) num1 - ROW_NUMBER() OVER (PARTITION BY scan_time, area ORDER BY scan_time) diff
+FROM trail)
+SELECT uid, area, min(scan_time) start_time, max(scan_time) end_time
+FROM tmp 
+GROUP BY uid, area, diff
+ORDER BY uid, scan_time;
+~~~
+
+### 问题二
+
+- 加入某个用户核酸检查为阳性，找出他的伴随人员
+
+  伴随规则：在阳性人员停留半小时以上的区域，用户停留半小时以上，并且停留时间和阳性人员有十分钟以上的交集。
+
+  ![SQL编程思想-面难题-查找密接1](D:\project\blog-vuepress\docs\.vuepress\public\images\SQL编程思想-面难题-查找密接1.png)
+
+~~~mysql
+WITH tmp AS (
+SELECT uid, area, scan_time,
+	   -- 扫描时间排序 - 区域划分后扫描时间排序
+	   ROW_NUMBER() OVER (PARTITION BY scan_time) num1 - ROW_NUMBER() OVER (PARTITION BY scan_time, area ORDER BY scan_time) diff
+FROM trail),
+tmp2 AS (
+SELECT uid, area, min(scan_time) start_time, max(scan_time) end_time
+FROM tmp 
+GROUP BY uid, area, diff
+HAVING min(scan_time) + INTERVAL 30 MINUTE <= max(scan_time)
+)
+SELECT *
+FROM tmp2 u1
+JOIN tmp2 u2
+ON (u1.uid <> u2.uid AND u1.area = u2.area
+	AND u1.start_time + INTERVAL 10 MINUTE <= u2.end_time
+	AND u2.start_time + INTERVAL 10 MINUTE <= u1.end_time)
+WHERE u1.uid = "13011111111";
+~~~
+
+### 思考
+
+- 算出和密接人员接触的时间
