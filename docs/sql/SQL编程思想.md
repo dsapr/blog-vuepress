@@ -63,7 +63,7 @@ ORDER BY uid, scan_time;
 
   伴随规则：在阳性人员停留半小时以上的区域，用户停留半小时以上，并且停留时间和阳性人员有十分钟以上的交集。
 
-  ![SQL编程思想-面难题-查找密接1](D:\project\blog-vuepress\docs\.vuepress\public\images\SQL编程思想-面难题-查找密接1.png)
+  ![SQL编程思想-面难题-查找密接1](../.vuepress/public/images/SQL编程思想-面难题-查找密接1.png)
 
 ~~~mysql
 WITH tmp AS (
