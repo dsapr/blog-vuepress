@@ -1,5 +1,28 @@
 # SQL 编程思想
 
+## 分页查询那些事
+
+> 分页查询是指为了改善前端用户的体验和系统性能，将查询结果分批返回和展示。分页查询常用的两种方式：
+>
+> 1. OFFSET 分页。利用 SQL 标准 OFFSET FETCH 或者 LIMIT OFFSET 子句制定偏移量和返回的行数，性能随着偏移量的增加明显下降。
+> 2. Keyset 分页，利用每次返回的记录集查找下一次的数据，性能不受数据量和偏移量的影响。可以实现页面无限滚动效果。
+
+创建用户表
+
+~~~mysql
+CREATE TABLE users(
+  id integer PRIMARY KEY,
+  name varchar(50) NOT NULL,
+  pswd varchar(50) NOT NULL,
+  email varchar(50),
+  create_time timestamp DEFAULT CURRENT_TIMESTAMP NOT NULL,
+  notes varchar(200)
+);
+~~~
+
+
+
+
 ## 员工考勤记录
 > 公司规定周一到周五（节假日除外）每天早上九点上班，下午六点下班，上下班都需要打卡。日历信息存储calendar表中，员工的打卡记录存储在attendance表中：
 
