@@ -68,12 +68,18 @@ WHERE create_time >= '2020-01-01 00:10:00' AND id > 20
 ORDER BY create_time, id
 LIMIT 20;
 
--- create_time 有索引，根据上次查询结果直接找到某一行记录向后 Limit
+-- create_time 有索引，根据上次查询结果直接找到某一行记录向后 LIMIT
 -- 缺点：不能制定页码跳页
 ~~~
 
+|    编程语言    |            Java            |       Javascript       |         Python          |     PHP      |
+| :------------: | :------------------------: | :--------------------: | :---------------------: | :----------: |
+| Keyset分页框架 | JOOQ</br>Blaze-Persistence | Node.js<br/>Massive.js | SQL Alchemy <br/>Django | Laravel 8.0+ |
+
+
 
 ## 员工考勤记录
+
 > 公司规定周一到周五（节假日除外）每天早上九点上班，下午六点下班，上下班都需要打卡。日历信息存储calendar表中，员工的打卡记录存储在attendance表中：
 
 |  id  | check_date | emp_id |      clock_in       |      clock_out      |
