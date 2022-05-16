@@ -32,6 +32,68 @@ AND (a.id IS NULL
      OR EXTRACT(HOUR FROM a.clock_out) < 18);
 ~~~
 
+
+
+## CASE 条件表达式
+
+> 公司即将成立 20 周年，打算给全体员工发放一个周年庆礼品。
+>
+> 发放礼品的规则如下：
+>
+> - 截止 2020 年入职年限不满 10 年的员工，男性员工的礼品为手表一块，女性员工的礼品为化妆品一套；
+> - 截至 2020 年入职年限满 10 年不满 15 年的员工，男性员工的礼品为手机一部，女性的礼品为项链一条
+> - 截至 2020 年入职年限满 15 年的员工，不论男女礼品统一为电脑一台
+>
+> 现在人事部门需要指导为每位员工发放什么礼品，如何通过SQL查询得到这些信息？
+
+员工信息表：emp_id, amp_name, sex, dept_id, manager, hire_date, job_id, salary, bonus, emails
+
+~~~mysql
+SELECT emp_name, sex, hire_date,
+			 CASE
+				 WHEN extract(year FROM hire_date) > 2011 AND sex = '男' THEN '手表'
+				 WHEN extract(year FROM hire_date) > 2011 AND sex = '女' THEN '化妆品'
+				 WHEN extract(year FROM hire_date) > 2006 AND sex = '男' THEN '手机'
+				 WHEN extract(year FROM hire_date) > 2006 AND sex = '女' THEN '项链'
+				 ELSE '电脑'
+			 END AS "礼品"
+FROM employee;
+~~~
+
+## 数据报表行列转换
+
+> 学生成绩记录表包含以下信息
+
+| sname | cname | grade |
+| :---: | :---: | :---: |
+| 张三  | 语文  |  80   |
+| 李四  | 语文  |  77   |
+| 王五  | 语文  |  91   |
+| 张三  | 数学  |  85   |
+| 李四  | 数学  |  90   |
+| 王五  | 数学  |  60   |
+|  ...  |  ...  |  ...  |
+
+> 要求以每个学生一行数据的形式创建以下报表：
+
+| 姓名 | 语文 | 数学 | 英语 |
+| :--: | :--: | :--: | :--: |
+| 张三 |  80  |  85  |  81  |
+| 李四 |  77  |  90  |  69  |
+| 王五 |  91  |  60  |  82  |
+
+~~~mysql
+SELECT sname AS "姓名",
+			 sum(CASE cname WHEN '语文' THEN grade END) AS "语文",
+			 sum(CASE cname WHEN '数学' THEN grade END) AS "数学",
+			 sum(CASE cname WHEN '英语' THEN grade END) AS "英语",
+			 sum(grade) AS "总分"
+FROM t_score ts
+GROUP BY sname;
+~~~
+
+
+
 # SQL 面试题
 
 ## 基于扫码记录 查找密接人员
