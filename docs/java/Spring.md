@@ -682,7 +682,7 @@ set注入 构造注入
 		2. Spring框架底层 大量应用了 set 注入
 ~~~
 
-![Spring注入](C:\note\image\Spring注入.png)
+![Spring注入](../.vuepress/public/images/Spring注入.png)
 
 ## 第七章、反转控制 与 依赖注入
 
@@ -695,7 +695,7 @@ set注入 构造注入
 底层实现：工厂设计模式
 ~~~
 
-![反转控制](C:\note\image\反转控制.png)
+![反转控制](../.vuepress/public/images/反转控制.png)
 
 ### 2. 依赖注入(Dependency Injection DI)
 
@@ -706,7 +706,7 @@ set注入 构造注入
 	好处：解耦合
 ~~~
 
-![依赖注入](C:\note\image\依赖注入.png)
+![依赖注入](../.vuepress/public/images/依赖注入.png)
 
 
 
@@ -716,7 +716,7 @@ set注入 构造注入
 简单对象目前指的是pojo，为了跟ejb的javabean作区分，即可以直接new的对象。复杂对象主要是抽象类、接口等不能直接创建
 ~~~
 
-![复杂对象](C:\note\image\复杂对象.png)
+![复杂对象](../.vuepress/public/images/复杂对象.png)
 
 ### 1. 什么是复杂对象
 
@@ -805,7 +805,7 @@ set注入 构造注入
   3. 返回 Connection
   ~~~
 
-  ![FactoryBean工作原理](C:\note\image\FactoryBean工作原理.png)
+  ![FactoryBean工作原理](../.vuepress/public/images/FactoryBean工作原理.png)
 
 - FactoryBean总结
 
@@ -889,7 +889,7 @@ FactoryBean{
 
 # 第十章、对象的生命周期
 
-![Spring生命周期](C:\note\image\Spring生命周期.png)
+![Spring生命周期](../.vuepress/public/images/Spring生命周期.png)
 
 ## 1. 什么是对象的生命周期
 
@@ -1077,7 +1077,7 @@ JVM
 作用：Spring 通过类型转换器把配置文件中字符串类型的数据，转换成了对象中成员变量对应类型的数据，进而完成了注入。
 ~~~
 
-![类型转换器](C:\note\image\类型转换器.png)
+![类型转换器](../.vuepress/public/images/类型转换器.png)
 
 #### 2. 自定义类型转换器
 
@@ -1201,7 +1201,7 @@ AOP底层实现：
 
 - 后置处理 Bean 的运行原理分析
 
-![后置处理Bean](C:\note\image\后置处理Bean.png)
+![后置处理Bean](../.vuepress/public/images/后置处理Bean.png)
 
 ~~~markdown
 程序员实现BeanPostProcessor规定接口中的方法
@@ -1504,7 +1504,7 @@ public class UserServiceProxy implements UserService{
    结论：动态代理不需要定义类文件，都是JVM运行过程中动态创建的，所以不会造成静态代理，类文件数量过多，影响项目管理的问题。
    ~~~
 
-   ![动态字节码](C:\note\image\动态字节码.png)
+   ![动态字节码](../.vuepress/public/images/动态字节码.png)
 
    2. 动态代理编程简化代理的开发
 
