@@ -10,3 +10,4 @@ title: JAVA 相关
 ## [λ 的前世今生直至来世](../java/λ的前世今生直至来世.md)
 ## [关于 ArrayList 那些事](../java/ArrayList.md)
 ## [Spring](../java/Spring.md)
+## [JVM名词](../java/JVM名词.md)
