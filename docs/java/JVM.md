@@ -64,3 +64,7 @@ public abstract class ClassLoader {
 双亲委派代码流程图：
 
 ![双亲委派代码流程图](../.vuepress/public/images/双亲委派代码流程图.png)
+
+#### 设计原因
+
+为了 JVM 安全性考虑。如果有人想替换系统核心类：String.java。篡改其实现，由于已经被 BootstrapclassLoader 加载过了，其他类没有机会再加载，防止了危险代码植入。
