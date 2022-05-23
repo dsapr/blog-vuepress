@@ -11,3 +11,5 @@ title: JAVA 相关
 ## [关于 ArrayList 那些事](../java/ArrayList.md)
 ## [Spring](../java/Spring.md)
 ## [JVM名词](../java/JVM名词.md)
+
+## [JVM](../java/JVM.md)
