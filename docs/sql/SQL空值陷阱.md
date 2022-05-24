@@ -153,3 +153,6 @@ INSERT t_check values(null,null);
 INSERT t_check values(1000,null);
 ~~~
 
+## 解决方案
+
+可以通过空值处理函数 `COALESCE` 和 `NULLIF` 处理空值，但是大多数情况下我们并不知道哪些字段是空的，也有可能会出现遗漏的情况。所以我们在定义字段的时候要尽量避免空值，定义一些默认值、特殊值、异常值，避免空值得存在。
