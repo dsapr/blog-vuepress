@@ -197,7 +197,24 @@ git rebase -i 版本号
 git rebase -i HEAD-3
 ~~~
 
+### 应用二
 
+合并分叉
+
+~~~bash
+git branch dev
+git checkout dev
+touch dev.py
+git add .
+git comit -m 'dev branch'
+
+git checkout master
+touch master.py
+git add .
+git commit -m 'master function'
+
+git log --graph
+~~~
 
 ## 推荐资料
 
