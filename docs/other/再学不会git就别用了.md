@@ -172,6 +172,33 @@ git merge master
 git push origin dev
 ~~~
 
+补充：
+
+~~~bash
+# 将代码从远程拉到版本库 然后 合并到工作区
+git pull origin dev
+# 等价于 ||
+git fetch origin dev
+git merge origin/dev
+~~~
+
+## rebase(变基)
+
+使 git 记录简洁
+
+### 应用一
+
+将多个提交记录整合成一个
+
+~~~bash
+# 合并最新记录到版本号
+git rebase -i 版本号
+# 合并最后几条记录
+git rebase -i HEAD-3
+~~~
+
+
+
 ## 推荐资料
 
 ### 廖雪峰 Git 教程
