@@ -87,10 +87,6 @@ git log
 
 ## Git内裂的三个部分
 
-所有操作看这张图就够了
-
-![git三大区域](../.vuepress/public/images/git三大区域.png)
-
 ### 工作区
 
 ### 暂存区
@@ -103,7 +99,7 @@ git log
 
 分支可以给使用者提供多个环境，可以把工作从开发主线上分离，以免影响开发主线
 
-![git紧急bug修复方案](../.vuepress/public/images/git紧急bug修复方案.png)
+![git紧急bug修复方案](D:\project\blog-vuepress\docs\.vuepress\public\images\git紧急bug修复方案.png)
 
 ~~~bash
 # 查看分支
@@ -159,83 +155,7 @@ git pull origin dev
 === 拉下来昨天的代码继续进行开发 ===
 ~~~
 
-。。。半个月后开发完毕，项目上线
 
-~~~bash
-# dev 分支合并到 master，进行上线
-git checkout master
-git merge dev
-git push origin master
-# 把 dev 分支也推送到远程
-git checkout dev
-git merge master
-git push origin dev
-~~~
-
-补充：
-
-~~~bash
-# 将代码从远程拉到版本库 然后 合并到工作区
-git pull origin dev
-# 等价于 ||
-git fetch origin dev
-git merge origin/dev
-~~~
-
-## rebase(变基)
-
-使 git 记录简洁
-
-### 应用一
-
-将多个提交记录整合成一个
-
-~~~bash
-# 合并最新记录到版本号
-git rebase -i 版本号
-# 合并最后几条记录
-git rebase -i HEAD-3
-~~~
-
-### 应用二
-
-合并分叉
-
-~~~bash
-git branch dev
-git checkout dev
-touch dev.py
-git add .
-git comit -m 'dev branch'
-
-git checkout master
-touch master.py
-git add .
-git commit -m 'master function'
-
-git log --graph
-git log --graph --pretty=format:"%h %s"
-~~~
-
-## 快速解决冲突
-
-1. 安装 beyond compare
-
-2. 在 git 中配置
-
-   ~~~bash
-   git config --local merge.tool bc3
-   git config --local mergetool.path '/usr/local/bin/bcomp'
-   git config --local mergetool.keepBackup false
-   ~~~
-
-3. 应用 beyond compare 解决冲突
-
-   ~~~bash
-   git mergetool
-   ~~~
-
-   
 
 ## 推荐资料
 
