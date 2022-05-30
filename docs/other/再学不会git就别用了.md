@@ -214,6 +214,7 @@ git add .
 git commit -m 'master function'
 
 git log --graph
+git log --graph --pretty=format:"%h %s"
 ~~~
 
 ## 推荐资料
