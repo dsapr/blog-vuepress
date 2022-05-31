@@ -217,6 +217,26 @@ git log --graph
 git log --graph --pretty=format:"%h %s"
 ~~~
 
+## 快速解决冲突
+
+1. 安装 beyond compare
+
+2. 在 git 中配置
+
+   ~~~bash
+   git config --local merge.tool bc3
+   git config --local mergetool.path '/usr/local/bin/bcomp'
+   git config --local mergetool.keepBackup false
+   ~~~
+
+3. 应用 beyond compare 解决冲突
+
+   ~~~bash
+   git mergetool
+   ~~~
+
+   
+
 ## 推荐资料
 
 ### 廖雪峰 Git 教程
