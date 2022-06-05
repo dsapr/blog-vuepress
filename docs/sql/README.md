@@ -11,3 +11,4 @@ title: SQL 相关
 ## [WHERE、HAVING以及ON](../sql/WHERE、HAVING以及ON.md)
 ## [SQL入门教程](../sql/SQL入门教程.md)
 ## [一条查询语句的执行过程](../sql/一条查询语句的执行过程.md)
+## [主键使用自增ID还是UUID](../sql/主键使用自增ID还是UUID.md)
