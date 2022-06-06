@@ -99,7 +99,7 @@ git log
 
 分支可以给使用者提供多个环境，可以把工作从开发主线上分离，以免影响开发主线
 
-![git紧急bug修复方案](D:\project\blog-vuepress\docs\.vuepress\public\images\git紧急bug修复方案.png)
+![git紧急bug修复方案](../.vuepress/public/images/git紧急bug修复方案.png)
 
 ~~~bash
 # 查看分支
