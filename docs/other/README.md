@@ -12,3 +12,4 @@ title: 其他
 ## [PDF内是什么](../other/PDF内是什么.md)
 ## [再学不会git就别用了](../other/再学不会git就别用了.md)
 ## [处理幂等性的思路](../other/处理幂等性的思路.md)
+## [Node.js开发实践](../other/Node.js开发实践.md)
