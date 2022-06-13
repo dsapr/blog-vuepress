@@ -82,9 +82,9 @@ https://npm.taobao.org
 
 - 命令行的 http client
 - 常用参数：
-  - -X <method>
-  - -H <header>
-  - -d <data>
+  - -X \<method\>
+  - -H \<header\>
+  - -d \<data\>
 
 ### Cygwin
 
