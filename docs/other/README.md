@@ -4,6 +4,7 @@ title: 其他
 ---
 # 其他
 
+## [凡人修仙转](../other/计算机书单.md)
 ## [饮食训练](../other/饮食训练.md)
 ## [热量计算](../other/热量计算.md)
 ## [树莓派之内网穿透](../other/树莓派之内网穿透.md)
@@ -13,3 +14,4 @@ title: 其他
 ## [再学不会git就别用了](../other/再学不会git就别用了.md)
 ## [处理幂等性的思路](../other/处理幂等性的思路.md)
 ## [Node.js开发实践](../other/Node.js开发实践.md)
+## [OAuth不是OAuth2！](../other/OAuth.md)
