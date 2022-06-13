@@ -73,3 +73,46 @@ https://npm.taobao.org
   - `engines.node` 指定所需的 Node.js 版本；出于兼容性考虑默认版本仍为比较旧的 `0.12`，**因此建议大家自行指定一个更高的版本，建议使用 `12.x` 版本进行开发**，你也可以设置为 `*` 表示总是使用最新版本的 Node.js。
   - `dependencies` 项目所依赖的包；使用 Node.js 10 以上的版本时，云引擎会在部署时用 `npm ci` 为你安装这里列出的所有依赖。
   - `devDependencies` 项目开发时所依赖的包；使用 Node.js 10 以上的版本时，云引擎会安装这里的依赖。
+
+## 2. 开发工具介绍
+
+**curl, Postman, lean-cli**
+
+### curl
+
+- 命令行的 http client
+- 常用参数：
+  - -X <method>
+  - -H <header>
+  - -d <data>
+
+### Cygwin
+
+Windows 系统下模拟 unix 命令
+
+### 开启 debug 日志
+
+### Postman
+
+### lean-cli
+
+## 3. Promise
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
