@@ -15,3 +15,4 @@ title: SQL 相关
 ## [SQL子句的逻辑执行顺序](../sql/SQL子句的逻辑执行顺序.md)
 ## [解读执行计划](../sql/解读执行计划.md)
 ## [索引的最左匹配原则](../sql/索引的最左匹配原则.md)
+## [docker搭建mysql](../sql/docker搭建mysql.md)
