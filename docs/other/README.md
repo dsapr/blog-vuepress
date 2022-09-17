@@ -4,6 +4,7 @@ title: 其他
 ---
 # 其他
 
+## [JavaScript](../other/JavaScript.md)
 ## [菜谱](../other/菜谱.md)
 ## [近况。。。](../other/近况.md)
 ## [凡人修仙转](../other/计算机书单.md)
