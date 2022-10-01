@@ -4,6 +4,7 @@ title: 其他
 ---
 # 其他
 
+## [maven](../other/maven.md)
 ## [JavaScript](../other/JavaScript.md)
 ## [菜谱](../other/菜谱.md)
 ## [近况。。。](../other/近况.md)
