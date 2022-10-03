@@ -286,7 +286,7 @@ mvn help:active-profiles
 
 指定某个具体 profile
 
-mvn compoile -P<profile id>
+mvn compoile -P[profile id]
 
 ### 版本仲裁
 
@@ -311,3 +311,7 @@ idea 插件，可以罗列出来同一个 jar 包不同版本以及来源。但�
 mvn clean package enforcer:enforce
 
 既可以检测同一个 jar 包的不同版本，又可以检测不同 jar 包中同名的类。
+
+#### 体系外 jar 包导入
+
+pass
