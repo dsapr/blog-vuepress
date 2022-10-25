@@ -1,0 +1,1 @@
+const t={key:"v-fd72440c",path:"/other/OAuth.html",title:"OAuth",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u7B80\u8981\u6D41\u7A0B",slug:"\u7B80\u8981\u6D41\u7A0B",children:[]}],git:{updatedTime:1655087676e3,contributors:[{name:"dsapr",email:"785722840@qq.com",commits:1}]},filePathRelative:"other/OAuth.md"};export{t as data};
